@@ -73,7 +73,7 @@ div#list-recipes
     left:0;
     width: 100%;
     height: 100%;
-    background: red;
+    background: lightblue;
     clip-path: circle(120px at center);
 }
 

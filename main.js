@@ -4,7 +4,7 @@ const serverUrl = "API_URL_HERE";
 const endpoint = isLocalhost ? "http://localhost:3000" : serverUrl;
 
 
-console.log("Hello World")
+console.log("Hello Worlds")
 
 // Fetch Recipes
 function fetchingEndpoints () {
