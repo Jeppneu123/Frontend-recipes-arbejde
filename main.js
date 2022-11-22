@@ -13,21 +13,19 @@ function fetchingEndpoints () {
         return res.json();
     })
     .then(function (Recipes){
-
         appendDishes (Recipes)
-
+        filterList(Recipes)
     })
 };
 
-function resetSite ()
-{
-    document.innerHTML = " ";
-}
+
 
 function appendDishes (postList)
 {
     console.log(postList)
     let html = "";
+    const divSelect = document.querySelector("div#list-recipes")
+    divSelect.innerHTML = "";
     for (let i = 0; i < postList.length; i++)
     {
         const post = postList[i];
@@ -59,5 +57,34 @@ function appendDishes (postList)
 }
 
 
+function filterList (dishToFilter) {
+    console.log(dishToFilter)
+    const button = document.querySelector("button.buttonfilter")
+    console.log(button)
+    button.addEventListener("click", function () {
+        console.log("lasse")
+        const input = document.querySelector("input.inputFilter")
+        console.log(input)
+        const inputValue = input.value
+        console.log(inputValue)
+        const filteredDishes = [];
+        for (let i = 0; i < dishToFilter.length; i++) {
+            const newDish = dishToFilter[i]
+            console.log(newDish.dish_name)
+            if (newDish.dish_name === inputValue){
+                filteredDishes.push(newDish)
+            }
+        }
+        appendDishes(filteredDishes)
+        console.log(filteredDishes)
+    })
+
+
+}
+
 // === INITIALIZE APP === //
 fetchingEndpoints()
+
+
+
+
