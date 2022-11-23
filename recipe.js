@@ -31,16 +31,25 @@ function fetchingProcedureEndpoints () {
         })
 }
 
+// Fetch Ingredients
+function fetchingIngredientsEndpoint () {
+    fetch (endpoint + "/ingredients/:id" + value).
+    then(function (res) {
+        return res.json();
+    })
+        .then(function (procedure){
+            console.log(procedure)
+        })
+}
+
 function appendDishOne (dish) {
     console.log(dish)
     const divSelect = document.querySelector("div.ret")
     let html = `
-    <div class="dishDiv">
-        <div class="dishSelected">
             <h1 class="header"> ${dish[0].dish_name}</h1>
-        </div>
-    </div>
- 
+            <div class="imageWrapper">
+                <img id="dishImage" src="${dish[0].dish_image}" alt="Picture Of ${dish[0].dish_name}">
+            </div>
     `
 divSelect.innerHTML=html
 
@@ -57,6 +66,8 @@ function appendProcedure (procedure) {
     `
     }
 }
+
+
 
 
 
