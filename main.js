@@ -72,7 +72,7 @@ function filterList (dishToFilter) {
         for (let i = 0; i < dishToFilter.length; i++) {
             const newDish = dishToFilter[i]
             console.log(newDish.dish_name)
-            if (newDish.dish_name === inputValue){
+            if (newDish.dish_name.toLowerCase().includes(inputValue)){
                 filteredDishes.push(newDish)
             }
         }
@@ -80,6 +80,8 @@ function filterList (dishToFilter) {
         console.log(filteredDishes)
     })
 }
+
+
 
 // === INITIALIZE APP === //
 fetchingEndpoints()
