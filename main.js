@@ -57,8 +57,8 @@ function appendDishes (postList)
 
 
 function filterList (dishToFilter) {
-    const button = document.querySelector("button.buttonfilter")
-    button.addEventListener("click", function () {
+    const searchBar = document.querySelector("input.inputFilter")
+    searchBar.addEventListener("input", function () {
         const input = document.querySelector("input.inputFilter")
         const inputValue = input.value
         const filteredDishes = [];
