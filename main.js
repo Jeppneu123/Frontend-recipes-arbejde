@@ -4,7 +4,6 @@ const serverUrl = "API_URL_HERE";
 const endpoint = isLocalhost ? "http://localhost:3000" : serverUrl;
 
 
-console.log("Hello Worlds")
 
 // Fetch Recipes
 function fetchingEndpoints () {
@@ -22,7 +21,6 @@ function fetchingEndpoints () {
 
 function appendDishes (postList)
 {
-    console.log(postList)
     let html = "";
     const divSelect = document.querySelector("div#list-recipes")
     divSelect.innerHTML = "";
@@ -59,25 +57,18 @@ function appendDishes (postList)
 
 
 function filterList (dishToFilter) {
-    console.log(dishToFilter)
     const button = document.querySelector("button.buttonfilter")
-    console.log(button)
     button.addEventListener("click", function () {
-        console.log("lasse")
         const input = document.querySelector("input.inputFilter")
-        console.log(input)
         const inputValue = input.value
-        console.log(inputValue)
         const filteredDishes = [];
         for (let i = 0; i < dishToFilter.length; i++) {
             const newDish = dishToFilter[i]
-            console.log(newDish.dish_name)
             if (newDish.dish_name.toLowerCase().includes(inputValue)){
                 filteredDishes.push(newDish)
             }
         }
         appendDishes(filteredDishes)
-        console.log(filteredDishes)
     })
 }
 
