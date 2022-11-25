@@ -47,7 +47,7 @@ function appendDishOne (dish) {
     console.log(dish)
     const divSelect = document.querySelector("div.ret")
     let html = `
-            <h1 class="header"> ${dish[0].dish_name}</h1>
+            <h2 class=""> ${dish[0].dish_name}</h2>
             <div class="imageWrapper">
                 <img id="dishImage" src="${dish[0].dish_image}" alt="Picture Of ${dish[0].dish_name}">
             </div>
@@ -60,10 +60,11 @@ function appendProcedure (procedure) {
     const divSelect = document.querySelector("div.procedure")
     for (let i = 0; i < procedure.length; i++) {
         divSelect.innerHTML+=`
-            <div class="procedureOne"> ${procedure[i].procedure_name} </div>   
+            <div class="procedure-one"> ${procedure[i].procedure_name} </div>   
       <div class="procedureDiv">
-            <div class="procedureOne"> ${procedure[i].procedure_name} </div>   
-            <div class="procedureOneDescription"> ${procedure[i].procedure_text}</div> 
+            <div class="procedure-one-description"> ${procedure[i].procedure_text}</div> 
+             <pre class="procedureIngredientsText">${procedure[i].procedure_ingredients_text}</pre> 
+
       </div>
       
     `
