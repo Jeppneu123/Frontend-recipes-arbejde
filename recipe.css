@@ -104,6 +104,9 @@ h2{
     background: linear-gradient(to right, rgba(229, 24, 45), rgba(0, 0,0));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    position: absolute;
+    left:650px;
+    top: 25px;
 }
 
 .navigation

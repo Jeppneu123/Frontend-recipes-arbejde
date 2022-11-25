@@ -185,6 +185,11 @@ background: black;
     width: 100%;
 }
 
+.header-title
+{
+    justify-content: center;
+    align-items: center;
+}
 .name
 {
     font-size: 35px;
@@ -195,6 +200,9 @@ background: black;
     background: linear-gradient(to right, rgba(229, 24, 45), rgba(0, 0,0));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    position: absolute;
+    left:650px;
+    top: 25px;
 }
 
 .navigation
@@ -239,7 +247,6 @@ background: black;
     background: hsl(150deg 30% 60% / 0.5);
     border-radius: 4px;
     font-size: 12px;
-
 }
 
 #form h1
@@ -295,3 +302,76 @@ background: black;
     font-size: 9px ;
     height: 13px;
 }
+
+.pop-up-container
+{
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    transition: 1s ease-in-out;
+
+    z-index: 10;
+
+    width: 300px;
+    margin: 20vh auto 0 auto;
+    padding:20px;
+    background: hsl(150deg 30% 60% / 0.5);
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.pop-up-container.active
+{
+    transform: translate(-50%,-50%) scale(1);
+}
+
+.registration-header
+{
+    padding: 15px 10px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+
+.registration-title
+{
+    font-family: 'Alexandria', sans-serif;
+    font-size: 1.50rem;
+    font-weight: bold;
+    color: black;
+}
+
+.registration-button
+{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+#overlay
+{
+    position: fixed;
+    opacity: 0;
+    transition: 1s ease-in-out;
+    top:0;
+    left: 0;
+    right:0;
+    bottom: 0;
+    background: rgba(0,0,0,0.75);
+    pointer-events: none;
+}
+
+#overlay.active
+{
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+
+
+

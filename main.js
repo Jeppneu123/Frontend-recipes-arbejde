@@ -123,8 +123,7 @@ function ValidateEmail(email)
     {
         return (true)
     }
-    alert("You have entered an invalid email address!")
-    return (false)
+        return (false)
 }
 
 // trim = remove whitespace from the text that you type
@@ -142,13 +141,13 @@ function validateInputs ()
     } else {
         success(username)
     }
-
+    debugger;
     if (emailValue === ""){
         console.error(email, 'Email is requried')
     } else if (ValidateEmail(email)) {
-        error (email, 'Provide valid email adress')
-    } else {
         success(email)
+    } else {
+        error (email, 'Provide valid email adress')
     }
     if (passwordValue === '')
     {
@@ -168,6 +167,27 @@ function validateInputs ()
             success (passwordCheck)
         }
 };
+
+// Registration pop-up
+
+const openRegistration = document.querySelector("#user")
+const closeRegistration = document.querySelector(".registration-button")
+const showRegistration = document.querySelector(".pop-up-container")
+const overlay = document.querySelector("#overlay")
+
+openRegistration.addEventListener("click", function ()
+{
+    if (showRegistration == null) return
+    showRegistration.classList.add("active")
+    overlay.classList.add("active")
+})
+
+closeRegistration.addEventListener("click", function ()
+{
+    if (showRegistration == null) return
+    showRegistration.classList.remove("remove")
+    overlay.classList.remove("active")
+})
 
 
 
