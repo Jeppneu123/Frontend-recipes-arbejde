@@ -7,17 +7,93 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="main.css" />
     <title>Recipe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>
-</header>
+    <header class="header flex">
+        <div>
+            <img src="download-removebg-preview.png" width="50" height="50" class="logo">
+        </div>
+
+        <div>
+            <a class="name"> Reci-Boys</a>
+        </div>
+
+
+        <nav>
+            <ul id="navigation" class="navigation flex">
+                <li class="active">
+                    <a href="index.html">
+                    <span><ion-icon name="home-outline"></ion-icon></span> Home
+                    </a>
+                </li>
+                <li>
+                    <a href="#input-parent">
+                        <span> <ion-icon name="fast-food-outline"></ion-icon> </span> Recipes
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span> <ion-icon name="people-outline"></ion-icon></span> User
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
 <main>
-    <input placeholder="Search Recipe Name" class="inputFilter">
+    <div class="image-parent">
+        <img class="image" src="https://res.cloudinary.com/hz3gmuqw6/image/upload/c_fill,q_60,w_750,f_auto/AdobeStock309940502-phpZs6oew">
+    </div>
+
+    <div id="input-parent" class="input-parent">
+        <input placeholder="Search Recipe Name" class="input-filter">
+        <button class="button-filter"> <span class="search-text"> Search </span></button>
+    </div>
+
+    <h1 id="recipes"> Recipes </h1>
+
+
     <div id="list-recipes">
 
     </div>
 
+    <div class="form-container">
+
+        <form id="form" action="/"> </form>
+        <h1> Registration </h1>
+        <div class="input">
+            <label for="username"> Username </label>
+            <input id="username" type="text">
+            <div class="fault"></div>
+        </div>
+        <div class="input">
+            <label for="email"> Email </label>
+            <input id="email" type="text">
+            <div class="fault"></div>
+        </div>
+        <div class="input">
+            <label for="password"> Password </label>
+            <input id="password" type="password">
+            <div class="fault"> </div>
+        </div>
+        <div class="input">
+            <label for="password"> Password again</label>
+            <input id="password-check" type="password">
+            <div class="fault"></div>
+        </div>
+        <button id="form-button" type="submit"> Sign up </button>
+    </div>
+
+
 </main>
 <script src="main.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

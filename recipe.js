@@ -46,12 +46,15 @@ function appendDishOne (dish) {
     console.log(dish)
     const divSelect = document.querySelector("div.ret")
     let html = `
-            <h1 class="header"> ${dish[0].dish_name}</h1>
-            <div class="imageWrapper">
-                <img id="dishImage" src="${dish[0].dish_image}" alt="Picture Of ${dish[0].dish_name}">
+            
+            <div class="image-wrapper">
+                <img id="dish-image" src="${dish[0].dish_image}" alt="Picture Of ${dish[0].dish_name}">
             </div>
+            <div>
+            
+            <h2 class="dish-name"> ${dish[0].dish_name}</h2>
     `
-divSelect.innerHTML=html
+    divSelect.innerHTML=html
 
 }
 function appendProcedure (procedure) {
@@ -60,8 +63,8 @@ function appendProcedure (procedure) {
     for (let i = 0; i < procedure.length; i++) {
         divSelect.innerHTML+=`
       <div class="procedureDiv">
-            <div class="procedureOne"> ${procedure[i].procedure_name} </div>   
-            <div class="procedureOneDescription"> ${procedure[i].procedure_text}</div> 
+            <div class="procedure-one"> ${procedure[i].procedure_name} </div>   
+            <div class="procedure-one-description"> ${procedure[i].procedure_text}</div> 
       </div>
     `
     }

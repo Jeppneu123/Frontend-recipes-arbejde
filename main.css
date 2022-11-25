@@ -3,12 +3,14 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
+
 }
 
 body
 {
     justify-content: center;
     align-items: center;
+    font-family: 'Alexandria', sans-serif;
 }
 
 div#list-recipes
@@ -33,7 +35,7 @@ div#list-recipes
     border: lightblue solid 1px;
     background: white;
     border-radius: 50px;
-    margin:15px;
+
 }
 
 .description
@@ -77,4 +79,219 @@ div#list-recipes
     clip-path: circle(120px at center);
 }
 
+/* Search bar and Icon */
 
+.input-parent
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 45px;
+    position: relative;
+}
+
+.input-filter
+{
+    width: 100%;
+    max-width: 350px;
+    background: rgba(255,255,255,0.2);
+    justify-content: center;
+    align-items: center;
+    position: center;
+    border-radius: 60px;
+    padding: 10px 20px;
+    height: 60px;
+    border: lightblue solid 1px;
+
+}
+
+.input-filter input
+{
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 24px 20px;
+    font-size: 17px;
+    color: black;
+}
+
+::placeholder
+{
+    color: black;
+    font-weight: bold;
+}
+
+.input-parent button
+{
+    position: absolute;
+    right: 1000px;
+    left: 835px;
+    width: 60px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 50%;
+    height: 60px;
+    background: hsl(150deg 30% 60% / 0.5);
+    font-weight: 500;
+}
+
+.input-parent .search-text
+{
+    color: black;
+    font-weight: bold;
+}
+
+.input-parent button:active
+{
+    cursor: wait;
+}
+
+.flex
+{
+    display: flex;
+    gap: 1rem;
+}
+
+h1
+{
+    font-family: 'Sedgwick Ave Display', cursive;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 30px;
+background: black;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Header */
+
+.logo
+{
+  margin:1rem;
+}
+
+
+.header
+{
+    align-items: center;
+    justify-content: space-between;
+    background: hsl(150deg 30% 60% / 0.5);
+    backdrop-filter: blur(0.7rem);
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.name
+{
+    font-size: 35px;
+    color: black;
+    font-family: 'Sedgwick Ave Display', cursive;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, rgba(229, 24, 45), rgba(0, 0,0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.navigation
+{
+    list-style: none;
+    padding: 0;
+    margin-right: 14px;
+}
+
+.navigation a
+{
+    text-decoration: none;
+    color: black;
+}
+
+.navigation a > span
+{
+    font-weight: 700;
+    margin-inline-end: 0.7em;
+}
+/* Image */
+.image
+{
+
+    margin-top: 100px;
+
+}
+.image-parent
+{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+/* login */
+
+.form-container
+{
+    width: 300px;
+    margin: 20vh auto 0 auto;
+    padding:20px;
+    background: hsl(150deg 30% 60% / 0.5);
+    border-radius: 4px;
+    font-size: 12px;
+
+}
+
+#form h1
+{
+    text-align: center;
+}
+
+.form-container button
+{
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    color: white;
+    background: black;
+    border: none;
+    border-radius: 4px;
+}
+
+.input
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.input input
+{
+    border: 2px solid black;
+    border-radius: 4px;
+    display: block;
+    font-size: 12px;
+    padding:10px;
+    width: 100%;
+}
+
+.input input:focus
+{
+    outline: 0;
+}
+
+.input.success input
+{
+    border-color: green;
+}
+
+.input.error input
+{
+    border-color: red;
+}
+
+.input .fault
+{
+    color: red;
+    font-size: 9px ;
+    height: 13px;
+}

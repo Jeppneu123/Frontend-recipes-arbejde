@@ -7,10 +7,50 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="recipe.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
 </head>
 <body>
+<header class="header flex">
+    <div>
+        <img src="download-removebg-preview.png" width="50" height="50" class="logo">
+    </div>
+
+    <div>
+        <a class="name"> Reci-Boys</a>
+    </div>
+
+
+    <nav>
+        <ul id="navigation" class="navigation flex">
+            <li class="active">
+                <a href="index.html">
+                    <span><ion-icon name="home-outline"> </ion-icon></span> Home
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <span> <ion-icon name="fast-food-outline"></ion-icon> </span> Recipes
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span> <ion-icon name="people-outline"></ion-icon></span> User
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
 <div class="ret"></div>
 <div class="procedure"></div>
+
 <script src="recipe.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
