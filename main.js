@@ -45,7 +45,7 @@ function appendDishes (postList)
                         <a> <span> Work time: </span> ${post.dish_work_time} <span> min</span></a>
                         <br>
                         <a> <span> Total time: </span> ${post.dish_time_total} <span> min</span></a>
-                        <a href="recipe.html?id=${post.dish_id}">Se Retten</a>
+                        <a href="recipe.html?id=${post.dish_id}">See Dish</a>
                         </div>
                 
                 </div>

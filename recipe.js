@@ -33,12 +33,13 @@ function fetchingProcedureEndpoints () {
 
 // Fetch Ingredients
 function fetchingIngredientsEndpoint () {
-    fetch (endpoint + "/ingredients/:id" + value).
+    fetch (endpoint + "/ingredients/" + value).
     then(function (res) {
         return res.json();
     })
-        .then(function (procedure){
-            console.log(procedure)
+        .then(function (ingredients){
+            console.log(ingredients)
+            appendIngredients(ingredients)
         })
 }
 
@@ -59,17 +60,33 @@ function appendProcedure (procedure) {
     const divSelect = document.querySelector("div.procedure")
     for (let i = 0; i < procedure.length; i++) {
         divSelect.innerHTML+=`
-      <div class="procedureDiv">
             <div class="procedureOne"> ${procedure[i].procedure_name} </div>   
+      <div class="procedureDiv">
             <div class="procedureOneDescription"> ${procedure[i].procedure_text}</div> 
+            <pre class="procedureIngredientsText">${procedure[i].procedure_ingredients_text}</pre>
+
       </div>
+      
     `
     }
 }
 
+/* function appendIngredients (ingredients) {
+    console.log(ingredients)
+    const divSelect = document.querySelector("div.procedure")
+    for (let i = 0; i < ingredients.length; i++) {
+        divSelect.innerHTML+=`
+      <div class="ingredientsDiv">
+            <div class="ingredientsOne"> ${ingredients[i].ingredients_name} </div>   
+      </div>
+    `
+    }
+}
+*/
 
+//vent til procedure er appended og så derefter smid ingredients ind i hver deres unikke div
+// kan man loope en sql query?
 
-
-
+fetchingIngredientsEndpoint()
 fetchingEndpoints ()
 fetchingProcedureEndpoints()
