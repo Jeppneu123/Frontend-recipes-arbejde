@@ -64,9 +64,9 @@ function appendProcedure (procedure) {
             <div class="procedure-one"> ${procedure[i].procedure_name} </div>   
       </div>
       <div class="procedureDiv">
-            <div class="procedure-one-description"> ${procedure[i].procedure_text}</div> 
-             <pre class="procedureIngredientsText">${procedure[i].procedure_ingredients_text}</pre> 
+                   <pre class="procedureIngredientsText">${procedure[i].procedure_ingredients_text}</pre> 
 
+                   <div class="procedure-one-description"><span class="procedureBoldText">Procedure</span> <br></br>${procedure[i].procedure_text}</div> 
       </div>
     `
     }
