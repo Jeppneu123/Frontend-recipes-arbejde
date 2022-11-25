@@ -33,12 +33,13 @@ function fetchingProcedureEndpoints () {
 
 // Fetch Ingredients
 function fetchingIngredientsEndpoint () {
-    fetch (endpoint + "/ingredients/:id" + value).
+    fetch (endpoint + "/ingredients/" + value).
     then(function (res) {
         return res.json();
     })
-        .then(function (procedure){
-            console.log(procedure)
+        .then(function (ingredients){
+            console.log(ingredients)
+            appendIngredients(ingredients)
         })
 }
 
@@ -46,15 +47,12 @@ function appendDishOne (dish) {
     console.log(dish)
     const divSelect = document.querySelector("div.ret")
     let html = `
-            
-            <div class="image-wrapper">
-                <img id="dish-image" src="${dish[0].dish_image}" alt="Picture Of ${dish[0].dish_name}">
+            <h1 class="header"> ${dish[0].dish_name}</h1>
+            <div class="imageWrapper">
+                <img id="dishImage" src="${dish[0].dish_image}" alt="Picture Of ${dish[0].dish_name}">
             </div>
-            <div>
-            
-            <h2 class="dish-name"> ${dish[0].dish_name}</h2>
     `
-    divSelect.innerHTML=html
+divSelect.innerHTML=html
 
 }
 function appendProcedure (procedure) {
@@ -62,10 +60,12 @@ function appendProcedure (procedure) {
     const divSelect = document.querySelector("div.procedure")
     for (let i = 0; i < procedure.length; i++) {
         divSelect.innerHTML+=`
+            <div class="procedureOne"> ${procedure[i].procedure_name} </div>   
       <div class="procedureDiv">
-            <div class="procedure-one"> ${procedure[i].procedure_name} </div>   
-            <div class="procedure-one-description"> ${procedure[i].procedure_text}</div> 
+            <div class="procedureOne"> ${procedure[i].procedure_name} </div>   
+            <div class="procedureOneDescription"> ${procedure[i].procedure_text}</div> 
       </div>
+      
     `
     }
 }
@@ -74,5 +74,6 @@ function appendProcedure (procedure) {
 
 
 
+fetchingIngredientsEndpoint()
 fetchingEndpoints ()
 fetchingProcedureEndpoints()

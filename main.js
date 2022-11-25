@@ -30,8 +30,8 @@ function fetchingEndpoints () {
 
 function appendDishes (postList)
 {
-    console.log(postList)
     let html = "";
+    const divSelect = document.querySelector("div#list-recipes")
     divSelect.innerHTML = "";
     for (let i = 0; i < postList.length; i++)
     {
@@ -46,19 +46,19 @@ function appendDishes (postList)
                 <div class="recipes-item">
                      <h2 class="headline"> ${post.dish_name}</h2>
                        
-                            <img width="100%" height="100%" src="${post.dish_image}">
+                            <img  width="100%" height="100%" src="${post.dish_image}">
                        
                         
-                        <div  class="description">
+                        <div class="description">
                         
                         <a> <span> Work time: </span> ${post.dish_work_time} <span> min</span></a>
                         <br>
                         <a> <span> Total time: </span> ${post.dish_time_total} <span> min</span></a>
-                   
+                        <a href="recipe.html?id=${post.dish_id}">Se Retten</a>
                         </div>
-                    <a href="recipe.html?id=${post.dish_id}"> saasea  </a>
+                
                 </div>
-            </div>
+            </div>  
 `
     }
     document.querySelector("#list-recipes").innerHTML = html;
@@ -66,32 +66,21 @@ function appendDishes (postList)
 
 
 function filterList (dishToFilter) {
-    console.log(dishToFilter)
-    input.addEventListener("input", function () {
-        console.log("lasse")
-        console.log(input)
+    const searchBar = document.querySelector("input.inputFilter")
+    searchBar.addEventListener("input", function () {
+        const input = document.querySelector("input.inputFilter")
         const inputValue = input.value
-        console.log(inputValue)
         const filteredDishes = [];
         for (let i = 0; i < dishToFilter.length; i++) {
             const newDish = dishToFilter[i]
-            console.log(newDish.dish_name)
             if (newDish.dish_name.toLowerCase().includes(inputValue)){
                 filteredDishes.push(newDish)
             }
         }
         appendDishes(filteredDishes)
-        console.log(filteredDishes)
     })
 }
 
-
-input.addEventListener("keypress",function(event){
-    if (event.key === "Enter"){
-        event.preventDefault();
-        searchBtn.click()
-    }
-})
 
 // form
 const form = document.querySelector("#form")
@@ -183,5 +172,10 @@ function validateInputs ()
 
 
 
+
 // === INITIALIZE APP === //
 fetchingEndpoints()
+
+
+
+

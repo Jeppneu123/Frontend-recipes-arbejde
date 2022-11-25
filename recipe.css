@@ -17,6 +17,15 @@
     border: 1px solid black;
     padding: 12px;
 }
+.procedureDiv {
+    display: flex;
+
+}
+.procedureIngredientsText {
+    width: 40%;
+    margin-bottom: 20px;
+    padding: 12px;
+}
 
 .dish-name {
     text-align: center;
