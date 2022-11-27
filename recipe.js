@@ -1,7 +1,7 @@
 const isLocalhost = location.hostname === "localhost" || location.hostname === "127.0.0.1";
 const serverUrl = "https://recipe-api-0qy8.onrender.com";
 
-const endpoint = isLocalhost ? "http://localhost:3000/" : serverUrl;
+const endpoint = isLocalhost ? "http://localhost:3000" : serverUrl;
 const params = new Proxy(new URLSearchParams(window.location.search), {
     get: (searchParams, prop) => searchParams.get(prop),
 });
@@ -10,7 +10,7 @@ let value = params.id; // "some_value"
 
 // Fetch Recipes
 function fetchingEndpoints () {
-    fetch (endpoint + "dishes/" + value).
+    fetch (endpoint + "/dishes/" + value).
     then(function (res) {
         return res.json();
     })
@@ -21,7 +21,7 @@ function fetchingEndpoints () {
 
 // Fetch Procedure
 function fetchingProcedureEndpoints () {
-    fetch (endpoint + "procedure/" + value).
+    fetch (endpoint + "/procedure/" + value).
     then(function (res) {
         return res.json();
     })
@@ -33,7 +33,7 @@ function fetchingProcedureEndpoints () {
 
 // Fetch Ingredients
 function fetchingIngredientsEndpoint () {
-    fetch (endpoint + "ingredients/" + value).
+    fetch (endpoint + "/ingredients/" + value).
     then(function (res) {
         return res.json();
     })
