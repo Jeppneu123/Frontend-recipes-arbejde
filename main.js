@@ -1,7 +1,7 @@
 const isLocalhost = location.hostname === "localhost" || location.hostname === "127.0.0.1";
 const serverUrl = "https://recipe-api-0qy8.onrender.com";
 
-const endpoint = isLocalhost ? "http://localhost:3000" : serverUrl;
+const endpoint = isLocalhost ? "http://localhost:3000/" : serverUrl;
 
 
 console.log("Hello Worlds")
@@ -24,7 +24,7 @@ formBtn.addEventListener("click", validateRegistration)
 
 // Fetch Recipes
 function fetchingEndpoints () {
-    fetch (endpoint + "/dishes").
+    fetch (endpoint + "dishes").
     then(function (res) {
         return res.json();
     })
