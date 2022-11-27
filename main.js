@@ -7,9 +7,26 @@ const endpoint = isLocalhost ? "http://localhost:3000" : serverUrl;
 console.log("Hello Worlds")
 
 // Const
+
 const input =  document.querySelector("input.input-filter")
 const divSelect = document.querySelector("div#list-recipes")
 const searchBtn = document.querySelector("button.button-filter")
+
+    // Registration pop-up
+const openRegistration = document.querySelector("#user")
+const closeRegistration = document.querySelector(".registration-button")
+const showRegistration = document.querySelector(".pop-up-container")
+const overlay = document.querySelector("#overlay")
+
+    // form
+const formBtn = document.querySelector("#form-button")
+const username = document.querySelector("#username")
+const email = document.querySelector("#email")
+const password = document.querySelector("#password")
+const passwordCheck = document.querySelector("#password-check")
+
+
+
 
 // EventListeners
 
@@ -82,17 +99,8 @@ function filterList (dishToFilter) {
 }
 
 
-// form
-const form = document.querySelector("#form")
-const formBtn = document.querySelector("#form-button")
-const username = document.querySelector("#username")
-const email = document.querySelector("#email")
-const password = document.querySelector("#password")
-const passwordCheck = document.querySelector("#password-check")
-
 formBtn.addEventListener("click", function (event) {
     event.preventDefault()
-    console.log("Hello")
     validateInputs ()
 })
 
@@ -170,11 +178,7 @@ function validateInputs ()
 
 // Registration pop-up
 
-const openRegistration = document.querySelector("#user")
-const closeRegistration = document.querySelector(".registration-button")
-const showRegistration = document.querySelector(".pop-up-container")
-const overlay = document.querySelector("#overlay")
-
+/*
 openRegistration.addEventListener("click", function ()
 {
     if (showRegistration == null) return
@@ -188,6 +192,8 @@ closeRegistration.addEventListener("click", function ()
     showRegistration.classList.remove("remove")
     overlay.classList.remove("active")
 })
+
+ */
 
 
 
