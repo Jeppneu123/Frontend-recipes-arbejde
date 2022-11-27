@@ -147,9 +147,24 @@ h1
     justify-content: center;
     display: flex;
     margin-bottom: 30px;
-background: black;
+    background: black;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-weight: bolder;
+
+}
+
+#registration-headline
+{
+    font-family: 'Sedgwick Ave Display', cursive;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 30px;
+    background: black;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 30px;
 }
 
 /* Header */
@@ -158,7 +173,6 @@ background: black;
 {
   margin:1rem;
 }
-
 
 .header
 {
@@ -235,15 +249,6 @@ background: black;
     border-radius: 4px;
     font-size: 12px;
 }
-
-/*
-.form-container.active
-{
-    transform: translate(-50%,-50%) scale(1);
-}
-
- */
-
 
 #form h1
 {

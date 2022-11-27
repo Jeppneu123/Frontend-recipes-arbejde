@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <header class="header flex">
         <div>
             <img src="download-removebg-preview.png" width="50" height="50" class="logo">
@@ -24,29 +25,29 @@
             <a class="name"> Reci-Boys</a>
         </div>
 
-
-        <nav>
-            <ul id="navigation" class="navigation flex">
-                <li class="active">
-                    <a href="index.html">
-                    <span><ion-icon name="home-outline"></ion-icon></span> Home
-                    </a>
-                </li>
-                <li>
-                    <a href="#input-parent">
-                        <span> <ion-icon name="fast-food-outline"></ion-icon> </span> Recipes
-                    </a>
-                </li>
-                <li>
-                    <a href="#registration" type="button" id="user">
-                        <span> <ion-icon name="people-outline"></ion-icon></span> User
-                    </a>
-                </li>
-            </ul>
-        </nav>
+            <nav>
+                <ul id="navigation" class="navigation flex">
+                    <li class="active">
+                        <a href="index.html">
+                        <span><ion-icon name="home-outline"></ion-icon></span> Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#input-parent">
+                            <span> <ion-icon name="fast-food-outline"></ion-icon> </span> Recipes
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#registration" type="button" id="user">
+                            <span> <ion-icon name="people-outline"></ion-icon></span> User
+                        </a>
+                    </li>
+                </ul>
+            </nav>
     </header>
 
 <main>
+
     <div class="image-parent">
         <img class="image" src="https://res.cloudinary.com/hz3gmuqw6/image/upload/c_fill,q_60,w_750,f_auto/AdobeStock309940502-phpZs6oew">
     </div>
@@ -57,37 +58,34 @@
 
     <h1 id="recipes"> Recipes </h1>
 
-
-    <div id="list-recipes">
-
-    </div>
+    <div id="list-recipes"> </div>
 
     <div class="form-container">
 
-        <h1> Registration </h1>
-        <div class="input">
-            <label for="username"> Username </label>
-            <input id="username" type="text">
-            <div class="fault"></div>
+            <h2 id="registration-headline"> Registration </h2>
+            <div class="input">
+                <label for="username"> Username </label>
+                <input id="username" type="text">
+                <div class="fault"></div>
+            </div>
+            <div class="input">
+                <label for="email"> E-mail </label>
+                <input id="email" type="text">
+                <div class="fault"></div>
+            </div>
+            <div class="input">
+                <label for="password"> Password </label>
+                <input id="password" type="password">
+                <div class="fault"> </div>
+            </div>
+            <div class="input">
+                <label for="password"> Please confirm password </label>
+                <input id="password-check" type="password">
+                <div class="fault"></div>
+            </div>
+            <button id="form-button" type="submit"> Register </button>
         </div>
-        <div class="input">
-            <label for="email"> Email </label>
-            <input id="email" type="text">
-            <div class="fault"></div>
-        </div>
-        <div class="input">
-            <label for="password"> Password </label>
-            <input id="password" type="password">
-            <div class="fault"> </div>
-        </div>
-        <div class="input">
-            <label for="password"> Password again</label>
-            <input id="password-check" type="password">
-            <div class="fault"></div>
-        </div>
-        <button id="form-button" type="submit"> Sign up </button>
     </div>
-</div>
 
     <div id="registration">
 
