@@ -1,5 +1,5 @@
 const isLocalhost = location.hostname === "localhost" || location.hostname === "127.0.0.1";
-const serverUrl = "API_URL_HERE";
+const serverUrl = "https://recipe-api-0qy8.onrender.com/";
 
 const endpoint = isLocalhost ? "http://localhost:3000" : serverUrl;
 const params = new Proxy(new URLSearchParams(window.location.search), {

@@ -1,5 +1,5 @@
 const isLocalhost = location.hostname === "localhost" || location.hostname === "127.0.0.1";
-const serverUrl = "API_URL_HERE";
+const serverUrl = "https://recipe-api-0qy8.onrender.com/";
 
 const endpoint = isLocalhost ? "http://localhost:3000" : serverUrl;
 
@@ -71,7 +71,7 @@ function appendDishes (postList)
                         <a> <span> Work time: </span> ${post.dish_work_time} <span> min</span></a>
                         <br>
                         <a> <span> Total time: </span> ${post.dish_time_total} <span> min</span></a>
-                        <a href="recipe.html?id=${post.dish_id}">Se Retten</a>
+                        <a href="recipe.html?id=${post.dish_id}">See Dish</a>
                         </div>
                 
                 </div>
